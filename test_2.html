@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form to JSON</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#updateButton").click(function () {
+          var formData = {
+            user: [
+              {
+                Name: $("#name").val(),
+                Age: $("#age").val(),
+                City: $("#city").val(),
+                Pincode: $("#pincode").val()
+              },
+            ],
+          };
+
+          // Read the existing JSON file
+          var fileInput = document.getElementById("jsonFile");
+          var file = fileInput.files[0];
+          var reader = new FileReader();
+          reader.onload = function (event) {
+            var existingData = JSON.parse(event.target.result);
+            // Merge existing data with new form data
+            Object.assign(existingData, formData);
+            // Convert merged data back to JSON string
+            var updatedJsonData = JSON.stringify(existingData, null, 2);
+            // Display or use updatedJsonData as needed
+            console.log(updatedJsonData);
+            alert("JSON file updated in memory.");
+          };
+          reader.readAsText(file);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+
+      <label for="age">Age:</label>
+      <input type="numder" id="age" name="age" /><br /><br />
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" /><br /><br />
+
+      <label for="pincode">Pincode:</label>
+      <input type="number" id="pincode" name="pincode" /><br /><br />
+
+      <label for="jsonFile">Choose an existing JSON file:</label>
+      <input type="file" id="jsonFile" name="jsonFile" /><br /><br />
+
+      <button type="button" id="updateButton">Update JSON File</button>
+    </form>
+  </body>
+</html>

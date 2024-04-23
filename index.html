@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      /* li{
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } */
+      /* .design {
+        color: red;
+        font-size: 25px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      } */
+      div{
+        height: 150px;
+        width: 200px;
+        background-color: orange;
+        padding: 10px;
+        border: 5px solid red;
+        margin: 10px;
+        margin-top: -300px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- <h3 class="design">Jquery</h3>
+
+    <button id="b1">show</button>
+    <button id="b2">hide</button> -->
+
+    <!-- <p id="a">jquery</p>
+    <h2 class="b">learn be learno</h2>
+    <h2 class="b">computer</h2> -->
+    <!-- <ul class="list">
+      <li>graphic designing</li>
+      <li>web designing</li>
+        <li>programming</li>
+        <li>
+            <ul>
+                <li>c program</li>
+                <li>c++ program</li>
+                <li>java</li>
+                <li>c#</li>
+            </ul>
+        </li>
+      </ul> -->
+      
+      <h1>Jquery</h1>
+      <div>digital technology</div>
+      <img src="download (1).png" width="300px" height="400px" alt="">
+    <script>
+
+        $("document").ready(function(){
+            //single
+            // $("h1").css('font-size','50px')
+            //multiple
+            $("h1").css({
+                'color':'white',
+                'font-size': '30px',
+                'background':'orange',
+                'padding':'10px',
+                'padding-right':'100%',
+                'text-align':'center',
+                'transition':'1s',
+
+            })
+
+            // $('div').width('200px').height('300px').css({
+            //     'color':'red',
+            //     'background':'pink',
+            //     'padding':'5px'
+            // })
+
+                                                //inner,outer,height and width
+            $("document").ready(function(){
+                // innerHeight = element+padding
+                console.log('InnerHeight : '+$('div').innerHeight())
+                console.log('InnerWidth : '+$('div').innerWidth())
+                console.log('OuterHeight : '+$('div').outerHeight())
+                console.log('outerWidth : '+$('div').outerWidth())
+                
+            })
+            $("div").css({
+                // 'margin-top':'-300px',
+                'transition':'1s',
+                'margin-top':'1px'
+            })
+        })
+
+
+
+                           // nth child  and  eq
+
+        // $("document").ready(function(){
+        //     $('ul.list').children('li:nth-child(2)').text('this is the nth child in jquery')
+
+        //     $('ul.list').children('li').eq(2).text('changed by eq')
+        // })
+
+                    // addclass and remove class
+
+    //   $("document").ready(function () {
+    //     $("#b1").click(function () {
+    //       $("h3").addClass("design");
+    //     });
+
+    //     $("#b2").click(function () {
+    //       $("h3").removeClass("design");
+    //     });
+    //   });
+
+      //   $("document").ready(function () {
+      //     alert("hello");
+      //   });
+
+      //   $("document").ready(function(){
+      //     //   $("h1").html ("test data")
+      //     $("h1").click(function(){
+
+      //         console.log("h1")
+      //     })
+      //   })
+
+      //   $("document").ready(function(){
+      //     $("h1").click(function(){
+      //         var a = $(this).html()
+      //         alert("do you want to select"+" "+a)
+      //     })
+      //   })
+
+      // $("document").ready(function(){
+      //     $("#a").click(function(){
+      //         var a = $(this).html("h1")
+      //         console.log(a)
+      //     })
+      // })
+
+      // $("document").ready(function(){
+      //     $(".b,#a").click(function(){
+      //         var a = $(this).html("hello")
+      //         var a = $(this).css("color","red")
+      //         var a = $(this).css("transition","2s")
+      //         console.log(a)
+      //     })
+      // })
+
+      // $("document").ready(function(){
+      //     $("h2.b").click(function(){
+      //         var a = $(this).html("hello")
+      //         var a = $(this).css("color","red")
+      //         console.log(a)
+      //     })
+      // })
+
+      // $("document").ready(function(){
+      //     $("h2:contains(o)").css("color","pink")
+      // })
+
+       $("document").ready(function(){
+           $('img').click(function(){
+               var a = $(this).attr('src')
+               $(this).attr('src','download (2).png')
+           })
+       })
+
+                                                    // dom query(children)
+      // $("document").ready(function(){
+      //     $('ul.list').children('li').css('color','red')
+      // })
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="form">
+      <input name="username" type="text" placeholder="username" />
+      <input name="password" type="password" placeholder="password" />
+      <input name="termscondition" type="checkbox" />
+
+      <button type="submit">submit</button>
+    </form>
+
+    <script>
+      const formEl = document.querySelector(".form");
+
+      formEl.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new formData(formEl);
+        const data = object.formEntries(formData);
+        
+        fetch("https://regres.in/api/users", {
+          method: "post",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+      });
+    </script>
+  </body>
+</html>

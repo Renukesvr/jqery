@@ -1,0 +1,34 @@
+{
+    "users":[
+        {
+            "Name":"zane",
+            "Age":54,
+            "City":"pondy",
+            "Pincode":"605008"
+        },
+        {
+            "Name":"chris",
+            "Age":37,
+            "City":"chennai",
+            "Pincode":"457608"
+        },
+        {
+            "Name":"sai",
+            "Age":19,
+            "City":"konaha",
+            "Pincode":"390115"
+        },
+        {
+            "Name":"eshvar",
+            "Age":22,
+            "City":"puducherry",
+            "Pincode":"605008"
+        },
+        {
+            "Name":"raju",
+            "Age":40,
+            "City":"mumbai",
+            "Pincode":"005876"
+        }
+    ]
+}
